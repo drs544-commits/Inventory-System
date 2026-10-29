@@ -1,0 +1,251 @@
+[gd_scene format=3 uid="uid://bo0f074yhp4cu"]
+
+[ext_resource type="Script" uid="uid://b0cekmsa8mw4n" path="res://Comber_Corbin_FantasyAdventure/scripts/start_screen_ui.gd" id="1_6mep8"]
+[ext_resource type="Texture2D" uid="uid://dg17g46gn6w1e" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/BACKGROUND IMAGES/BG_04.png" id="1_bky6a"]
+[ext_resource type="Texture2D" uid="uid://khqb42wjxf2g" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/GAME TITLE LOGO/Game Title Logo_transp.png" id="2_6mep8"]
+[ext_resource type="Texture2D" uid="uid://d3ug55ycqlfg1" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/BUTTONS/Screenshot 2026-09-09 223403.png" id="3_otkoe"]
+[ext_resource type="AudioStream" uid="uid://d4fhwcjxvrdpy" path="res://Comber_Corbin_FantasyAdventure/assets/audio/Button_Click.mp3" id="5_otkoe"]
+[ext_resource type="Texture2D" uid="uid://ofiqhtid2brg" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/BANNERS & SCROLLS/Scroll_04.png" id="6_mbpuj"]
+[ext_resource type="Texture2D" uid="uid://bt4rmiihkrp48" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/PROGRAMMER NAME TEXT/Corbin_Comber_text.png" id="7_aqf78"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5npl"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(0.4745098, 1, 0.54901963, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84kyu"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(0.7058824, 0.7058824, 0.7058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbn7q"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(1, 0.9607843, 0.8235294, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcb4m"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(0.8745098, 0.28235295, 0.27450982, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nswit"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(0.7058824, 0.7058824, 0.7058824, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fo7o0"]
+texture = ExtResource("3_otkoe")
+modulate_color = Color(1, 0.9607843, 0.8235294, 1)
+
+[sub_resource type="Animation" id="Animation_p5npl"]
+resource_name = "Game_Title_bounce"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scroll:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("name:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 0.99999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TitleLogo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.39999998, 0.6, 0.79999995),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.8, 0.8), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glign"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scroll:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("name:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.09019608)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TitleLogo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5glkd"]
+_data = {
+&"Game_Title_bounce": SubResource("Animation_p5npl"),
+&"RESET": SubResource("Animation_glign")
+}
+
+[node name="StartScreen" type="Control" unique_id=1933211143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6mep8")
+
+[node name="background" type="TextureRect" parent="." unique_id=1477439566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -55.0
+offset_right = 832.0
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5148207, 0.56368226)
+texture = ExtResource("1_bky6a")
+stretch_mode = 6
+
+[node name="TitleLogo" type="TextureRect" parent="." unique_id=589725055]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = -0.99999905
+offset_right = 320.0
+offset_bottom = 199.0
+grow_horizontal = 2
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("2_6mep8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StartButton" type="Button" parent="." unique_id=1879336529]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -213.00003
+offset_top = -98.0
+offset_right = -205.00003
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(16.269249, 3.7162168)
+theme_override_styles/normal = SubResource("StyleBoxTexture_p5npl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_84kyu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cbn7q")
+
+[node name="QuitButton" type="Button" parent="." unique_id=1598551238]
+custom_minimum_size = Vector2(20, 10)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 114.00003
+offset_top = -96.99997
+offset_right = 134.00003
+offset_bottom = -86.99997
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(6.288427, 2.6696868)
+theme_override_styles/normal = SubResource("StyleBoxTexture_vcb4m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nswit")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fo7o0")
+
+[node name="QuitConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1364305857]
+dialog_text = "Are you sure you want to quit?"
+
+[node name="TitleAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1956819538]
+libraries/ = SubResource("AnimationLibrary_5glkd")
+autoplay = &"Game_Title_bounce"
+
+[node name="Start_Game_label" type="Label" parent="." unique_id=1102393757]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 260.0
+offset_right = 214.0
+offset_bottom = 283.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Start Game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=47220282]
+
+[node name="Quit_Label" type="Label" parent="." unique_id=1712817347]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 262.0
+offset_right = 518.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Quit"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1202113882]
+stream = ExtResource("5_otkoe")
+
+[node name="scroll" type="TextureRect" parent="." unique_id=2118018290]
+layout_mode = 0
+offset_left = 21.000004
+offset_top = 118.0
+offset_right = 171.0
+offset_bottom = 268.0
+rotation = -0.13674517
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("6_mbpuj")
+expand_mode = 1
+
+[node name="name" type="TextureRect" parent="." unique_id=954445843]
+modulate = Color(1, 1, 1, 0.09019608)
+layout_mode = 0
+offset_left = 61.0
+offset_top = 168.00002
+offset_right = 161.0
+offset_bottom = 238.00002
+rotation = -0.112357326
+texture = ExtResource("7_aqf78")
+expand_mode = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="confirmed" from="QuitConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

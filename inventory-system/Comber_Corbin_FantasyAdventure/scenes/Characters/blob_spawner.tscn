@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dlvf8yn3xlaf4"]
+
+[node name="BlobSpawner" type="Node2D" unique_id=183384267]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=80296110]
+
+[node name="SpawnPoint1" type="Marker2D" parent="." unique_id=1058023390]
+
+[node name="SpawnPoint2" type="Marker2D" parent="." unique_id=2042386130]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://chuetwc2hllsn"]
+
+[ext_resource type="Texture2D" uid="uid://cxfav5ppm2x30" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/healthbar/healthbarUnder.png" id="1_ea1kn"]
+[ext_resource type="Texture2D" uid="uid://bwqswcrdxhuwx" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/healthbar/healthbarProgress.png" id="2_ia4fv"]
+[ext_resource type="Script" uid="uid://ctjdqco35ohdd" path="res://Comber_Corbin_FantasyAdventure/scripts/health_bar.gd" id="3_ia4fv"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=2134102285]
+
+[node name="Control" type="Control" parent="." unique_id=118806775]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerHealthBar" type="TextureProgressBar" parent="Control" unique_id=556514778]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.238005, 0.8739639)
+nine_patch_stretch = true
+texture_under = ExtResource("1_ea1kn")
+texture_progress = ExtResource("2_ia4fv")
+script = ExtResource("3_ia4fv")

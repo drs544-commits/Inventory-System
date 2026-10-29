@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c81ordk44ph12"]
+
+[ext_resource type="Texture2D" uid="uid://bp3k5563sol75" path="res://Comber_Corbin_FantasyAdventure/assets/art/GRAPHICS/Enemy/PNG/Slime1/Idle/Slime1_Idle_full.png" id="1_5l0o7"]
+[ext_resource type="Script" uid="uid://cir6f0g23pfas" path="res://Comber_Corbin_FantasyAdventure/scripts/blob_monster.gd" id="1_e2bc5"]
+[ext_resource type="Script" uid="uid://c2v0h464xv3lp" path="res://Comber_Corbin_FantasyAdventure/scripts/hitbox.gd" id="3_e2bc5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6dp6g"]
+radius = 9.055386
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0a837"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m8hp"]
+
+[node name="BlobMonster" type="CharacterBody2D" unique_id=17697927]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_e2bc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1400250864]
+position = Vector2(0, -14)
+texture = ExtResource("1_5l0o7")
+region_enabled = true
+region_rect = Rect2(18.00003, 17.666668, 28.666656, 27.333332)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538333518]
+light_mask = 3
+visibility_layer = 4
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_6dp6g")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=901642933]
+
+[node name="PlayerDetector" type="Area2D" parent="." unique_id=1108587126]
+position = Vector2(1, 2)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=382833708]
+position = Vector2(-1, -14)
+scale = Vector2(4.219447, 4.469027)
+shape = SubResource("CircleShape2D_0a837")
+
+[node name="BlobHitbox" type="Area2D" parent="." unique_id=679588624]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_e2bc5")
+damage = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlobHitbox" unique_id=177702510]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_8m8hp")
+debug_color = Color(0.6153347, 0.5297356, 0.25220007, 0.41960785)
+
+[node name="PatrolTimer" type="Timer" parent="." unique_id=1465426324]

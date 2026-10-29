@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0p45vu3ro7h5"]
+
+[ext_resource type="Script" uid="uid://c2v0h464xv3lp" path="res://Comber_Corbin_FantasyAdventure/scripts/hitbox.gd" id="1_da1jy"]
+[ext_resource type="Texture2D" uid="uid://damf7anr1trs4" path="res://icon.svg" id="2_k0vod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkc1t"]
+size = Vector2(15.690155, 15.370666)
+
+[node name="SpikeTrap" type="Area2D" unique_id=1133482611]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_da1jy")
+damage = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1759670201]
+position = Vector2(-3, -3)
+texture = ExtResource("2_k0vod")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508979251]
+position = Vector2(-0.99999976, -7.7076)
+scale = Vector2(8.667856, 8.88607)
+shape = SubResource("RectangleShape2D_fkc1t")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
